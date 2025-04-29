@@ -1,0 +1,39 @@
+# Archivos Git
+.git
+.gitignore
+.github/
+
+# Directorios de build
+build/
+out/
+target/
+.gradle/
+bin/
+
+# Archivos IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.settings/
+.project
+.classpath
+.vscode/
+
+# Archivos Docker
+.dockerignore
+docker-compose*.yml
+
+# Archivos Helm/Kubernetes
+helm/
+k8s/
+*.yaml
+*.yml
+!src/**/*.yml
+!src/**/*.yaml
+
+# Otros
+README.md
+LICENSE
+.DS_Store
+*.log

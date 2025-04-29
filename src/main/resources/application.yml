@@ -9,7 +9,7 @@ spring:
   
   # Configuración de base de datos PostgreSQL
   datasource:
-    url: jdbc:postgresql://localhost:5432/ecommerce
+    url: jdbc:postgresql://localhost:5432/inventario_db
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
