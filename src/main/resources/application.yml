@@ -9,25 +9,34 @@ spring:
   
   # Configuración de base de datos PostgreSQL
   datasource:
-    url: jdbc:postgresql://localhost:5432/inventario_db
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-    hikari:
-      connection-timeout: 20000
-      maximum-pool-size: 10
-      minimum-idle: 5
-      idle-timeout: 300000
-      pool-name: InventarioHikariCP
+    url: jdbc:mariadb://localhost:3306/inventario_db
+    username: root
+    password: rootpassword
+    driver-class-name: org.mariadb.jdbc.Driver
+    # url: jdbc:postgresql://localhost:5432/inventario_db
+    # username: postgres
+    # password: postgres
+    # driver-class-name: org.postgresql.Driver
+    # hikari:
+    #   connection-timeout: 20000
+    #   maximum-pool-size: 10
+    #   minimum-idle: 5
+    #   idle-timeout: 300000
+    #   pool-name: InventarioHikariCP
   
   # Configuración JPA/Hibernate
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.MariaDBDialect
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-        jdbc.lob.non_contextual_creation: true
+    # database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # show-sql: true
+    # properties:
+    #   hibernate:
+    #     format_sql: true
+    #     jdbc.lob.non_contextual_creation: true
     hibernate:
       ddl-auto: update # Cambiar a 'validate' en producción
   
